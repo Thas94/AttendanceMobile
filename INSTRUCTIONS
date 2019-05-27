@@ -1,0 +1,16 @@
+1. Open Mobile.sn
+2. Connect your android smartphone to the pc via usb cable.
+3. Make sure your device is in developer mode, if not follow these instruction:
+	3.1 Go to settings on device
+	3.2 Go to system or about phone
+	3.3 Click builder number 7 times until message pops up.
+	3.4 Go back you'll see developer options
+	3.5 Click and enable USB debugging.
+4. Make sure you have internet connection
+5. Your device name will show where you run the app.
+6. Go to solution expoler and click and go to manage nuget packages.
+7. Browse and install these nuget packages:
+	7.1 Microsoft.Net.Http
+	7.2 Newtonsoft.Json
+	7.3 Xam.Plugins.Settings 3.1.1
+6. Start app.

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.Profile"
+             Padding="14"
+             Title="Profile">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Out" Order="Secondary" Priority="0"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <ScrollView 
+            Orientation="Vertical">
+
+            <StackLayout
+                Orientation="Vertical">
+
+                <Grid x:Name="profileView" IsVisible="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Orientation="Vertical" Grid.Row="0">
+                        <Image Source="options.png" />
+                        <Button FontSize="Large" Text="Profile" Clicked="Stu_Prof" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" Grid.Row="1" >
+                        <Image Source="book.png" />
+                        <Button FontSize="Large" Text="Course and Subjects" Clicked="Course_Sub"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical"  Grid.Row="2">
+                        <Image Source="details.png" />
+                        <Button FontSize="Large" Text="Attendance" Clicked="Attendance" />
+                    </StackLayout>
+
+                </Grid>
+
+            </StackLayout>
+
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

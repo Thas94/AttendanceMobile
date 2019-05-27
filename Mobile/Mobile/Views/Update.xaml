@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.Update"
+             Title="Update details">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout 
+            Orientation="Vertical"
+            Padding="16">
+
+                <Image
+                              Grid.Column="0" 
+                              Grid.Row="0"
+                              HeightRequest="52"
+                              HorizontalOptions="End"
+                              Source="updateUser.png"
+                              VerticalOptions="Center"
+                              WidthRequest="50" 
+                    Style="ce"/>
+
+                <ActivityIndicator
+                x:Name="activityIndicator"
+                IsEnabled="true"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="true"
+                Color="#E3435D"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="userr.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="Username" x:Name="username" HeightRequest="50" WidthRequest="300"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <Entry IsVisible="False" x:Name="FirstName" HeightRequest="50" WidthRequest="300"/>
+
+
+                <Entry IsVisible="False" x:Name="LastName" HeightRequest="50" WidthRequest="300"/>
+
+                <Entry IsVisible="False" x:Name="StuNum" HeightRequest="50" WidthRequest="300"/>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="password.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                        <Entry Placeholder="Password" IsPassword="False" x:Name="Password" HeightRequest="50" WidthRequest="300"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <Entry IsVisible="False" x:Name="fingerID" HeightRequest="50" WidthRequest="300"/>
+
+                <Entry IsVisible="False" x:Name="ID" HeightRequest="50" WidthRequest="300"/>
+
+
+
+                <Button
+              
+                HorizontalOptions="Fill"
+                BorderRadius="5"
+                BackgroundColor="#007bff"
+                Text="Update"
+                TextColor="White"
+                Clicked="UpdateStudent"
+               />
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

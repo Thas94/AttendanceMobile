@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Views.Course_Sub"
+             Title="Course and Subjects">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10">
+            <ActivityIndicator
+                x:Name="activityIndicator"
+                IsEnabled="true"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="true"
+                Color="#E3435D"/>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                              Grid.Column="1"
+                              HeightRequest="25"
+                              HorizontalOptions="End"
+                              Source="book.png"
+                              VerticalOptions="Center"
+                              WidthRequest="25" />
+                    <Entry x:Name="courseName" HeightRequest="50" WidthRequest="300"/>
+
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Subjects" FontSize="Large"/>
+            <ListView x:Name="FlightView" ItemTapped="FlightView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding ID}" Detail="{Binding NAME}"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
